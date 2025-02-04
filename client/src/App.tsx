@@ -128,13 +128,14 @@ function AudioTranslator() {
   };
 
   const Footer = () => (
-    <footer className="px-4 py-4 text-sm text-center text-gray-500 mt-18">
+    <footer className="px-2 py-4 mt-8 text-sm text-center text-gray-500 sm:px-4 sm:mt-18">
       <p>built with love by team of developers from genezio.com</p>
       <button className="flex items-center gap-2 px-4 py-2 mx-auto mt-2 bg-gray-100 rounded-lg">
         <a
           href="https://genezio.com"
           target="_blank"
           rel="noopener noreferrer"
+          className="flex items-center gap-2"
         >
           <span>🤔</span>
           <span>What is Genezio?</span>
@@ -145,24 +146,24 @@ function AudioTranslator() {
 
   if (translationResult) {
     return (
-      <div className="flex flex-col min-h-screen p-4">
-        <div className="flex items-center justify-between p-4">
-          <img src="/genezio.svg" alt="Genezio Logo" className="h-10" />
+      <div className="flex flex-col min-h-screen p-2 sm:p-4">
+        <div className="flex flex-col items-center justify-between gap-4 p-2 sm:flex-row sm:p-4">
+          <img src="/genezio.svg" alt="Genezio Logo" className="h-8 sm:h-10" />
           <a
-            href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/voice-translation-gpt4"
+            href="https://app.genez.io/start/fork?repository=https://github.com/Genez-io/voice-translation-gpt4"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#1a1533] text-white px-4 py-2 rounded-lg flex items-center gap-2"
+            className="w-full sm:w-auto bg-[#1a1533] text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base"
           >
             <span>
-              <img src="/iconRacket.svg" alt="icon" className="w-6 h-6" />
+              <img src="/iconRacket.svg" alt="icon" className="w-5 h-5 sm:w-6 sm:h-6" />
             </span>
             Make your own version
           </a>
         </div>
 
-        <main className="flex flex-col items-center flex-1 w-full max-w-3xl gap-4 p-8 mx-auto">
-          <h1 className="mt-8 mb-8 text-4xl font-semibold text-black">
+        <main className="flex flex-col items-center flex-1 w-full max-w-3xl gap-4 p-4 mx-auto sm:p-8">
+          <h1 className="mt-4 mb-4 text-3xl font-semibold text-center text-black sm:mt-8 sm:mb-8 sm:text-4xl">
             Audio Translator
           </h1>
 
@@ -212,24 +213,24 @@ function AudioTranslator() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen p-4">
-      <div className="flex items-center justify-between p-4">
-        <img src="/genezio.svg" alt="Genezio Logo" className="h-10" />
+    <div className="flex flex-col min-h-screen p-2 sm:p-4">
+      <div className="flex flex-col items-center justify-between gap-4 p-2 sm:flex-row sm:p-4">
+        <img src="/genezio.svg" alt="Genezio Logo" className="h-8 sm:h-10" />
         <a
-          href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/voice-translation-gpt4"
+          href="https://app.genez.io/start/fork?repository=https://github.com/Genez-io/voice-translation-gpt4"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#1a1533] text-white px-4 py-2 rounded-lg flex items-center gap-2"
+          className="w-full sm:w-auto bg-[#1a1533] text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base"
         >
           <span>
-            <img src="/iconRacket.svg" alt="icon" className="w-6 h-6" />
+            <img src="/iconRacket.svg" alt="icon" className="w-5 h-5 sm:w-6 sm:h-6" />
           </span>
           Make your own version
         </a>
       </div>
 
-      <main className="flex flex-col items-center flex-1 w-full max-w-3xl gap-4 p-8 mx-auto">
-        <h1 className="mt-8 mb-8 text-4xl font-semibold text-black">
+      <main className="flex flex-col items-center flex-1 w-full max-w-3xl gap-4 p-4 mx-auto sm:p-8">
+        <h1 className="mt-4 mb-4 text-3xl font-semibold text-center text-black sm:mt-8 sm:mb-8 sm:text-4xl">
           Audio Translator
         </h1>
 
@@ -237,7 +238,7 @@ function AudioTranslator() {
           <label className="block mb-2 font-medium text-gray-700">
             Upload Audio File
           </label>
-          <div className="flex items-center w-full px-3 py-2 bg-white border border-gray-200 rounded-lg">
+          <div className="flex flex-col items-center w-full gap-2 px-3 py-2 bg-white border border-gray-200 rounded-lg sm:flex-row">
             <input
               type="file"
               accept="audio/*"
@@ -247,17 +248,17 @@ function AudioTranslator() {
             />
             <label
               htmlFor="audio-upload"
-              className="px-4 py-1 text-gray-700 bg-gray-100 rounded-full cursor-pointer"
+              className="w-full px-4 py-1 text-center text-gray-700 bg-gray-100 rounded-full cursor-pointer sm:w-auto"
             >
               Choose file
             </label>
             {audioFile && (
-              <span className="ml-4 text-gray-600">{audioFile.name}</span>
+              <span className="text-sm text-gray-600 truncate">{audioFile.name}</span>
             )}
           </div>
         </div>
 
-        <div className="grid w-full grid-cols-2 gap-4 mb-4 md:grid-cols-2 sm:grid-cols-1">
+        <div className="grid w-full grid-cols-1 gap-4 mb-4 sm:grid-cols-2">
           <div>
             <label className="block mb-2 font-medium text-gray-700">
               Source Language
