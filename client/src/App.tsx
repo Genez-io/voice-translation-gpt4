@@ -129,7 +129,7 @@ function AudioTranslator() {
 
   const Footer = () => (
     <footer className="px-2 py-4 mt-8 text-sm text-center text-gray-500 sm:px-4 sm:mt-18">
-      <p>built with love by team of developers from genezio.com</p>
+      <p>Developed and deployed on Genezio</p>
       <button className="flex items-center gap-2 px-4 py-2 mx-auto mt-2 bg-gray-100 rounded-lg">
         <a
           href="https://genezio.com"
@@ -146,9 +146,11 @@ function AudioTranslator() {
 
   if (translationResult) {
     return (
-      <div className="flex flex-col min-h-screen p-2 sm:p-4">
+      <div className="flex flex-col h-screen p-2 overflow-hidden sm:p-4">
         <div className="flex flex-col items-center justify-between gap-4 p-2 sm:flex-row sm:p-4">
-          <img src="/genezio.svg" alt="Genezio Logo" className="h-8 sm:h-10" />
+          <a href="/">
+            <img src="/genezio.svg" alt="Genezio Logo" className="h-8 sm:h-10" />
+          </a>
           <a
             href="https://app.genez.io/start/fork?repository=https://github.com/Genez-io/voice-translation-gpt4"
             target="_blank"
@@ -162,7 +164,7 @@ function AudioTranslator() {
           </a>
         </div>
 
-        <main className="flex flex-col items-center flex-1 w-full max-w-3xl gap-4 p-4 mx-auto sm:p-8">
+        <main className="flex flex-col items-center flex-1 w-full max-w-3xl gap-4 p-4 mx-auto overflow-y-auto sm:p-8">
           <h1 className="mt-4 mb-4 text-3xl font-semibold text-center text-black sm:mt-8 sm:mb-8 sm:text-4xl">
             Audio Translator
           </h1>
@@ -199,7 +201,7 @@ function AudioTranslator() {
             <div className="flex justify-end w-full mb-4">
               <button
                 onClick={() => setTranslationResult(null)}
-                className="text-sm italic text-right text-gray-600 hover:text-gray-800"
+                className="text-sm italic text-right text-gray-600 transition-all hover:text-gray-800 hover:underline"
               >
                 Translate another voice &gt;&gt;
               </button>
@@ -213,9 +215,11 @@ function AudioTranslator() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen p-2 sm:p-4">
+    <div className="flex flex-col h-screen p-2 overflow-hidden sm:p-4">
       <div className="flex flex-col items-center justify-between gap-4 p-2 sm:flex-row sm:p-4">
-        <img src="/genezio.svg" alt="Genezio Logo" className="h-8 sm:h-10" />
+        <a href="/">
+          <img src="/genezio.svg" alt="Genezio Logo" className="h-8 sm:h-10" />
+        </a>
         <a
           href="https://app.genez.io/start/fork?repository=https://github.com/Genez-io/voice-translation-gpt4"
           target="_blank"
@@ -229,7 +233,7 @@ function AudioTranslator() {
         </a>
       </div>
 
-      <main className="flex flex-col items-center flex-1 w-full max-w-3xl gap-4 p-4 mx-auto sm:p-8">
+      <main className="flex flex-col items-center flex-1 w-full max-w-3xl gap-4 p-4 mx-auto overflow-y-auto sm:p-8">
         <h1 className="mt-4 mb-4 text-3xl font-semibold text-center text-black sm:mt-8 sm:mb-8 sm:text-4xl">
           Audio Translator
         </h1>
@@ -248,7 +252,7 @@ function AudioTranslator() {
             />
             <label
               htmlFor="audio-upload"
-              className="w-full px-4 py-1 text-center text-gray-700 bg-gray-100 rounded-full cursor-pointer sm:w-auto"
+              className="w-full px-4 py-1 text-center text-gray-700 transition-colors bg-gray-100 rounded-full cursor-pointer sm:w-auto hover:bg-gray-200"
             >
               Choose file
             </label>
@@ -303,9 +307,31 @@ function AudioTranslator() {
         <button
           onClick={handleTranslate}
           disabled={!audioFile || isTranslating}
-          className="w-full py-3 bg-[#1a1533] text-white rounded-lg font-medium text-base"
+          className="w-full py-3 bg-[#1a1533] text-white rounded-lg font-medium text-base flex items-center justify-center gap-2"
         >
-          {isTranslating ? "Translating ..." : "Translate"}
+          {isTranslating && (
+            <svg
+              className="w-5 h-5 animate-spin"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              />
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              />
+            </svg>
+          )}
+          {isTranslating ? "Translating..." : "Translate"}
         </button>
       </main>
 
