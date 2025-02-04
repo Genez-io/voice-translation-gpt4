@@ -14,6 +14,7 @@ frontend:
             - npm run dev
     environment:
         VITE_API_URL_FASTAPI: ${{ backend.functions.fastapi.url }}
+    subdomain: audio-translator
 backend:
     path: server
     language:

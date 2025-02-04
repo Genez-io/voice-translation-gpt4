@@ -152,7 +152,7 @@ function AudioTranslator() {
             <img src="/genezio.svg" alt="Genezio Logo" className="h-8 sm:h-10" />
           </a>
           <a
-            href="https://app.genez.io/start/fork?repository=https://github.com/Genez-io/voice-translation-gpt4"
+            href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/voice-translation-gpt4"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto bg-[#1a1533] text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base"
@@ -221,7 +221,7 @@ function AudioTranslator() {
           <img src="/genezio.svg" alt="Genezio Logo" className="h-8 sm:h-10" />
         </a>
         <a
-          href="https://app.genez.io/start/fork?repository=https://github.com/Genez-io/voice-translation-gpt4"
+          href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/voice-translation-gpt4"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full sm:w-auto bg-[#1a1533] text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base"
