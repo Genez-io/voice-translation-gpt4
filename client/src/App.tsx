@@ -307,7 +307,7 @@ function AudioTranslator() {
         <button
           onClick={handleTranslate}
           disabled={!audioFile || isTranslating}
-          className="w-full py-3 bg-[#6A4ABA] text-white rounded-lg font-medium text-base flex items-center justify-center gap-2"
+          className="w-full py-3 bg-[#1a1533] text-white rounded-lg font-medium text-base flex items-center justify-center gap-2"
         >
           {isTranslating && (
             <svg
