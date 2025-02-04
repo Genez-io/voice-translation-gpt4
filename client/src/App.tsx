@@ -155,7 +155,7 @@ function AudioTranslator() {
             href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/voice-translation-gpt4"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto bg-[#1a1533] text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base"
+            className="w-full sm:w-auto bg-[#6A4ABA] text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base"
           >
             <span>
               <img src="/iconRacket.svg" alt="icon" className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -224,7 +224,7 @@ function AudioTranslator() {
           href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/voice-translation-gpt4"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-auto bg-[#1a1533] text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base"
+          className="w-full sm:w-auto bg-[#6A4ABA] text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base"
         >
           <span>
             <img src="/iconRacket.svg" alt="icon" className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -307,7 +307,7 @@ function AudioTranslator() {
         <button
           onClick={handleTranslate}
           disabled={!audioFile || isTranslating}
-          className="w-full py-3 bg-[#1a1533] text-white rounded-lg font-medium text-base flex items-center justify-center gap-2"
+          className="w-full py-3 bg-[#6A4ABA] text-white rounded-lg font-medium text-base flex items-center justify-center gap-2"
         >
           {isTranslating && (
             <svg
