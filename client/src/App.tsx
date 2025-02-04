@@ -149,7 +149,7 @@ function AudioTranslator() {
         <div className="flex items-center justify-between p-4">
           <img src="/genezio.svg" alt="Genezio Logo" className="h-10" />
           <a
-            href="https://genezio.com"
+            href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/voice-translation-gpt4"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#1a1533] text-white px-4 py-2 rounded-lg flex items-center gap-2"
@@ -216,7 +216,7 @@ function AudioTranslator() {
       <div className="flex items-center justify-between p-4">
         <img src="/genezio.svg" alt="Genezio Logo" className="h-10" />
         <a
-          href="https://genezio.com"
+          href="https://app.genez.io/start/deploy?repository=https://github.com/Genez-io/voice-translation-gpt4"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#1a1533] text-white px-4 py-2 rounded-lg flex items-center gap-2"
